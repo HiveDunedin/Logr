@@ -1,0 +1,10 @@
+{
+  "name": "Logr",
+  "version": "1.0.0",
+  "description": "An Open Source Logbook App",
+  "main": "launcher.js",
+  "repository": "https://github.com/HiveDunedin/Logr",
+  "author": "Logr Maintainers",
+  "license": "Apache-2.0",
+  "private": false
+}
