@@ -6,5 +6,8 @@
   "repository": "https://github.com/HiveDunedin/Logr",
   "author": "Logr Maintainers",
   "license": "Apache-2.0",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "electron": "^8.0.3"
+  }
 }
