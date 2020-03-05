@@ -7,10 +7,18 @@
   "author": "Logr Maintainers",
   "license": "Apache-2.0",
   "private": false,
+  "scripts": {
+    "_react": "cross-env BROWSER=none react-scripts start",
+    "_electron": "nodemon --exec \"cross-env APP_URL=http://localhost:3000 electron .\" --ext js --watch public/",
+    "_build": "react-scripts build",
+    "start": "concurrently \"yarn _react\" \"wait-on http://localhost:3000 && yarn _electron\" ",
+    "build": "yarn _build && build --mac --win --linux --x64 --ia32 -p always"
+  },
   "devDependencies": {
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.1",
     "electron": "^8.0.3",
+    "electron-builder": "^22.3.6",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "react-scripts": "^3.4.0",
